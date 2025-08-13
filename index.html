@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fahim Hasan — Digital Marketer & Growth Specialist</title>
+  <meta name="description" content="Fahim Hasan — Digital marketer specializing in SEO, Facebook Ads, content marketing & conversion-focused campaigns. Portfolio, case studies, blog and contact." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root{
+      --primary:#0d6efd;
+      --dark:#0b1724;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--dark);
+      background: linear-gradient(180deg,#f7fbff 0%, #f4f7fb 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    /* --- layout --- */
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(13,110,253,0.05)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:46px;height:46px;border-radius:10px;object-fit:cover}
+    .brand h3{font-size:18px;margin:0}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--dark);text-decoration:none;font-weight:600}
+    .cta-btn{background:var(--primary);color:white;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    /* --- hero --- */
+    .hero{padding:70px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center}
+    .hero-title{font-size:40px;line-height:1.05;margin-bottom:14px}
+    .hero-sub{color:var(--muted);margin-bottom:18px;font-size:16px}
+    .hero-actions{display:flex;gap:12px}
+    .card-hero{background:linear-gradient(180deg,#fff,#fbfdff);padding:22px;border-radius:14px;box-shadow:0 10px 30px rgba(13,110,253,0.06)}
+    .features{display:flex;gap:10px;margin-top:16px}
+    .feature{flex:1;padding:12px;border-radius:10px;background:rgba(13,110,253,0.06);text-align:center}
+
+    /* --- sections --- */
+    section{padding:60px 0}
+    h2{font-size:26px;margin-bottom:18px}
+    p.lead{color:var(--muted);max-width:780px}
+
+    /* services */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 8px 18px rgba(11,23,36,0.03);transition:transform .35s,box-shadow .35s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 18px 36px rgba(11,23,36,0.08)}
+    .service i{font-size:28px;margin-bottom:10px;color:var(--primary)}
+
+    /* portfolio */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .project img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+    .badge{background:var(--primary);color:white;padding:6px 10px;border-radius:999px;font-weight:700}
+
+    /* testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .quote{font-style:italic;color:var(--muted)}
+
+    /* blog */
+    .post{display:flex;gap:14px;align-items:flex-start}
+    .post img{width:160px;height:100px;object-fit:cover;border-radius:8px}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:24px}
+    form input,form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefb;background:white}
+    form button{background:var(--primary);color:white;padding:10px 14px;border-radius:8px;border:0;font-weight:700}
+
+    /* footer */
+    footer{padding:30px 0;background:linear-gradient(180deg,#f4f7fb,#eef6ff)}
+
+    /* small screens */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+
+    /* --- small animations & utility --- */
+    .reveal{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.9,.3,1)}
+    .reveal.active{opacity:1;transform:translateY(0)}
+    .fade{opacity:0;transition:opacity .9s ease}
+    .fade.in{opacity:1}
+
+    /* subtle typing */
+    .typing{border-right:2px solid var(--dark);padding-right:6px;display:inline-block;white-space:nowrap;overflow:hidden}
+
+    /* counters */
+    .counter{font-size:28px;font-weight:800}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="fahim12.jpg" alt="Fahim Hasan">
+        <div>
+          <h3>Fahim Hasan</h3>
+          <div style="color:var(--muted);font-size:13px">Digital Marketer & Growth Specialist</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <a class="cta-btn" href="#contact">Work with me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="card-hero reveal">
+            <div style="display:flex;align-items:center;gap:14px">
+              <div style="flex:1">
+                <h1 class="hero-title">I help businesses grow online — <span class="typing" id="typing"></span></h1>
+                <p class="hero-sub">Performance-first digital marketing: SEO, Facebook & Google Ads, content that converts, and measurable growth strategies tailored for small businesses and local brands.</p>
+                <div class="hero-actions">
+                  <a class="cta-btn" href="#contact">Hire me — ৳499/session</a>
+                  <a href="#portfolio" style="padding:8px 12px;border-radius:8px;border:1px solid #e6eefb;text-decoration:none;font-weight:700;color:var(--dark)">See portfolio</a>
+                </div>
+                <div class="features">
+                  <div class="feature"><strong>3+ yrs</strong><div style="font-size:13px;color:var(--muted)">experience</div></div>
+                  <div class="feature"><strong>100+</strong><div style="font-size:13px;color:var(--muted)">campaigns</div></div>
+                  <div class="feature"><strong>Local focus</strong><div style="font-size:13px;color:var(--muted)">Chattogram & BD</div></div>
+                </div>
+              </div>
+              <div style="width:160px">
+                <img src="fahim2.jpg" alt="work" style="width:100%;border-radius:10px;display:block">
+              </div>
+            </div>
+          </div>
+
+          <!-- quick stats -->
+          <div style="display:flex;gap:12px;margin-top:18px">
+            <div class="card" style="flex:1;text-align:center">
+              <div class="counter" data-target="842">0</div>
+              <div style="color:var(--muted);font-weight:600">Leads generated</div>
+            </div>
+            <div class="card" style="flex:1;text-align:center">
+              <div class="counter" data-target="128">0</div>
+              <div style="color:var(--muted);font-weight:600">Successful campaigns</div>
+            </div>
+            <div class="card" style="flex:1;text-align:center">
+              <div class="counter" data-target="95">0</div>
+              <div style="color:var(--muted);font-weight:600">Client satisfaction %</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA / contact card -->
+        <aside class="card reveal">
+          <h3>Free 15-min audit</h3>
+          <p style="color:var(--muted);font-size:14px">Send your website or Facebook page and I'll reply with a short audit and quick wins you can implement today.</p>
+          <form id="quickForm" style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+            <input type="text" placeholder="Your name" required id="qname">
+            <input type="email" placeholder="Email" required id="qemail">
+            <input type="text" placeholder="Website or FB page link" id="qurl">
+            <button type="submit">Request audit</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="reveal">About Me</h2>
+        <p class="lead reveal">I'm <strong>Fahim Hasan</strong>, a digital marketer focused on measurable growth. I blend SEO, paid ads, content, and conversion optimisation to help small businesses in Bangladesh scale revenue, not just traffic.</p>
+        <div style="display:flex;gap:18px;margin-top:18px;flex-wrap:wrap">
+          <div class="card reveal" style="flex:1;min-width:260px">
+            <h4>What I do</h4>
+            <ul style="color:var(--muted);margin-top:8px">
+              <li>Paid ads (Facebook & Google) — strategy, creatives, optimization</li>
+              <li>SEO & Content — keyword strategy, on-page, technical fixes</li>
+              <li>Conversion optimisation — landing pages, funnels, copy</li>
+            </ul>
+          </div>
+          <div class="card reveal" style="flex:1;min-width:260px">
+            <h4>My approach</h4>
+            <p style="color:var(--muted)">I prioritise quick wins and measurement. Each campaign starts with a tracking setup, clear KPIs and a small test budget to validate messaging before scale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 class="reveal">Services</h2>
+        <p class="lead reveal">Services designed for small & local businesses — transparent pricing, measurable goals, and monthly reports.</p>
+        <div class="grid" style="margin-top:16px">
+          <div class="card service reveal">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>SEO Optimization</h3>
+            <p style="color:var(--muted)">On-page & technical SEO, local SEO (Google Business Profile), content planning to rank and attract buyers.</p>
+          </div>
+
+          <div class="card service reveal">
+            <i class="fa-brands fa-facebook"></i>
+            <h3>Facebook & Instagram Ads</h3>
+            <p style="color:var(--muted)">Audience research, creative ad copy, conversion tracking, and bid management for consistent CPL reduction.</p>
+          </div>
+
+          <div class="card service reveal">
+            <i class="fa-brands fa-google"></i>
+            <h3>Google Search & Performance Max</h3>
+            <p style="color:var(--muted)">Target high-intent customers with search ads and smart bidding strategies to get quality leads.</p>
+          </div>
+
+          <div class="card service reveal">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>Content Marketing</h3>
+            <p style="color:var(--muted)">Blog strategy, long-form SEO posts, and short social content that builds authority and traffic.</p>
+          </div>
+
+          <div class="card service reveal">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3>Landing Pages & CRO</h3>
+            <p style="color:var(--muted)">High-converting landing pages with A/B testing and heatmap-guided improvements.</p>
+          </div>
+
+          <div class="card service reveal">
+            <i class="fa-solid fa-chart-pie"></i>
+            <h3>Reporting & Analytics</h3>
+            <p style="color:var(--muted)">Monthly performance reports, Google Analytics & Ads dashboard setup and actionable insights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+      <div class="container">
+        <h2 class="reveal">Work Process</h2>
+        <p class="lead reveal">Clear, repeatable steps so you always know what's happening and when.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+          <div class="card reveal" style="flex:1;min-width:240px">
+            <h4>01. Quick Audit</h4>
+            <p style="color:var(--muted)">I review your funnel, tracking and current ads to find fast improvements.</p>
+          </div>
+          <div class="card reveal" style="flex:1;min-width:240px">
+            <h4>02. Strategy & Plan</h4>
+            <p style="color:var(--muted)">A 30/60/90 day plan with measurable KPIs and the expected ROI.</p>
+          </div>
+          <div class="card reveal" style="flex:1;min-width:240px">
+            <h4>03. Test & Scale</h4>
+            <p style="color:var(--muted)">Small tests, measure results, and scale winners to reduce cost per lead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="reveal">Selected Case Studies</h2>
+        <p class="lead reveal">A few recent projects with clear results.</p>
+        <div class="projects" style="margin-top:18px">
+          <article class="project card reveal">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Campaign for local restaurant">
+            <h4 style="margin-top:12px">Mission Hilsa — Facebook Ads for Seafood Store</h4>
+            <div class="project-meta"><div style="color:var(--muted)">Local targeting, WhatsApp orders funnel</div><div class="badge">+76% sales</div></div>
+            <p style="color:var(--muted);margin-top:10px">Built a local awareness and conversion funnel that reduced CPL by 38% and increased weekly orders.</p>
+          </article>
+
+          <article class="project card reveal">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="SEO for clinic">
+            <h4 style="margin-top:12px">Dr. Rizwan — Local SEO for Dental Clinic</h4>
+            <div class="project-meta"><div style="color:var(--muted)">GMB & on-page work</div><div class="badge">+42% calls</div></div>
+            <p style="color:var(--muted);margin-top:10px">Optimized local listings and content; improved visibility for service keywords and increased appointment calls.</p>
+          </article>
+
+          <article class="project card reveal">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Ecommerce ads">
+            <h4 style="margin-top:12px">E-commerce Clothing Store</h4>
+            <div class="project-meta"><div style="color:var(--muted)">Product feed & dynamic ads</div><div class="badge">ROAS 4.3x</div></div>
+            <p style="color:var(--muted);margin-top:10px">Set up dynamic product ads + catalog and improved catalog quality to increase return on ad spend.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section>
+      <div class="container">
+        <h2 class="reveal">What Clients Say</h2>
+        <div class="testimonials" style="margin-top:18px">
+          <div class="card reveal">
+            <p class="quote">"Fahim increased our online orders in 2 months. Clear reports and fast changes. Highly recommended."</p>
+            <div style="margin-top:10px;font-weight:700">— Sazzad, Mission Hilsa</div>
+          </div>
+
+          <div class="card reveal">
+            <p class="quote">"Practical advice with measurable growth. The local SEO work was spot on."</p>
+            <div style="margin-top:10px;font-weight:700">— Dr. Rizwan</div>
+          </div>
+
+          <div class="card reveal">
+            <p class="quote">"Great communication and real results. Our CPL dropped by half."</p>
+            <div style="margin-top:10px;font-weight:700">— Client X</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+      <div class="container">
+        <h2 class="reveal">From the Blog</h2>
+        <p class="lead reveal">Actionable tips, tutorials and case studies about marketing in Bangladesh.</p>
+
+        <article class="card post reveal" style="margin-top:16px">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="blog1">
+          <div>
+            <h3>How to run a high-converting Facebook campaign for local stores</h3>
+            <p style="color:var(--muted);margin-top:6px">Step-by-step: audience research, creative templates, bidding strategy and a WhatsApp order funnel.</p>
+            <a href="#" style="font-weight:700;margin-top:8px;display:inline-block">Read more →</a>
+          </div>
+        </article>
+
+        <article class="card post reveal" style="margin-top:12px">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="blog2">
+          <div>
+            <h3>Local SEO checklist for clinics & shops</h3>
+            <p style="color:var(--muted);margin-top:6px">Simple technical fixes and content ideas that bring more phone calls and visits.</p>
+            <a href="#" style="font-weight:700;margin-top:8px;display:inline-block">Read more →</a>
+          </div>
+        </article>
+
+        <article class="card post reveal" style="margin-top:12px">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="blog3">
+          <div>
+            <h3>5 copy formulas that increase clicks</h3>
+            <p style="color:var(--muted);margin-top:6px">Proven ad headlines, CTA patterns and description templates that work for local markets.</p>
+            <a href="#" style="font-weight:700;margin-top:8px;display:inline-block">Read more →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="reveal">Contact</h2>
+        <p class="lead reveal">Ready to grow? Send a message and I’ll get back within 24–48 hours.</p>
+        <div class="contact-grid" style="margin-top:18px">
+          <form class="card reveal" onsubmit="handleContact(event)">
+            <label style="font-weight:700">Name</label>
+            <input type="text" id="name" required>
+            <label style="font-weight:700;margin-top:8px">Email</label>
+            <input type="email" id="email" required>
+            <label style="font-weight:700;margin-top:8px">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your business and goals" required></textarea>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button type="submit">Send message</button>
+              <button type="button" style="border:1px solid #e6eefb;background:white;padding:10px 14px;border-radius:8px" onclick="window.location='#'">WhatsApp</button>
+            </div>
+          </form>
+
+          <aside class="card reveal">
+            <h4>Contact details</h4>
+            <p style="color:var(--muted)"><strong>Email:</strong> <a href="mailto:fahimhassan@gmail.com">fahimhassan@gmail.com</a></p>
+            <p style="color:var(--muted)"><strong>Location:</strong> Chattogram, Bangladesh</p>
+            <h4 style="margin-top:12px">Social</h4>
+            <div style="display:flex;gap:8px;margin-top:6px">
+  <a href="https://www.facebook.com/profile.php?id=61559687413377
+" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/fahimgunsur?igsh=MTRlZGwyNzc3OGR5eQ==" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://linkedin.com/in/yourusername" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+</div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>&copy; 2025 <strong>Fahim Hasan</strong> — Digital Marketer</div>
+      <div style="color:var(--muted);font-size:14px">Built with care • Available for freelance & agency work</div>
+    </div>
+  </footer>
+
+  <script>
+    // typing effect (hero)
+    const words = ['increasing leads.', 'reducing CPL.', 'boosting sales.'];
+    let i=0, j=0, current='';
+    const typingEl = document.getElementById('typing');
+    (function type(){
+      if(i>=words.length) i=0;
+      const word = words[i];
+      current = word.slice(0, j+1);
+      typingEl.textContent = current;
+      j++;
+      if(j===word.length){
+        setTimeout(()=>{j=0;i++;type()},900);
+      } else setTimeout(type,120);
+    })();
+
+    // reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');obs.unobserve(e.target)}},{threshold:0.12})
+    });
+    reveals.forEach(r=>obs.observe(r));
+
+    // counters
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter=>{
+      const update = () =>{
+        const target = +counter.dataset.target;
+        const current = +counter.textContent.replace(/[^0-9]/g,'')||0;
+        const increment = Math.ceil(target/120);
+        if(current < target){
+          counter.textContent = current + increment;
+          setTimeout(update,18);
+        } else counter.textContent = target;
+      }
+      const io = new IntersectionObserver((entries)=>{entries.forEach(en=>{if(en.isIntersecting){update();io.unobserve(counter)}})});
+      io.observe(counter);
+    });
+
+    // quick form (no backend — simulate)
+    document.getElementById('quickForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      alert('Thanks — I received your audit request. I will email a short audit in 24–48 hours.');
+      this.reset();
+    });
+
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value;
+      const email=document.getElementById('email').value;
+      const message=document.getElementById('message').value;
+      if(!name||!email||!message){alert('Please fill all fields');return}
+      alert('Message sent. I will reply within 24–48 hours.');
+      e.target.reset();
+    }
+
+  </script>
+</body>
+</html>
